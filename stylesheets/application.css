@@ -1,3 +1,4 @@
+/* Stylesheets */
 /* Global Reset
 ------------------------------------------------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -65,6 +66,8 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* Variables */
+/* Fonts */
 @font-face {
   font-family: ProximaNova;
   src: url("../fonts/proximanova-thin.eot");
@@ -72,6 +75,7 @@ table {
   font-weight: light;
   font-style: normal; }
 
+/* Global */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -85,11 +89,13 @@ table {
 .orange {
   color: #f15c37; }
 
+/* Basics */
 body {
   color: white;
   font-weight: normal;
   font-family: ProximaNova, "helvetica neue", helvetica, arial, sans-serif; }
 
+/* Typography */
 h1, h2, h3, h4, h5 {
   display: inline-block;
   font-weight: light;
@@ -129,22 +135,12 @@ p {
 strong {
   font-weight: bold; }
 
+/* Links */
 a {
   color: inherit;
   text-decoration: underline; }
   a:hover {
     text-decoration: none; }
-
-.wrap {
-  zoom: 1;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .wrap:before, .wrap:after {
-    content: "";
-    display: table; }
-  .wrap:after {
-    clear: both; }
 
 .button {
   -webkit-border-radius: 2rem;
@@ -166,6 +162,18 @@ a {
       background: #f04c24; }
     .button.orange:active {
       background: #ef451a; }
+
+/* Layout */
+.wrap {
+  zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrap:before, .wrap:after {
+    content: "";
+    display: table; }
+  .wrap:after {
+    clear: both; }
 
 .right {
   float: right;
@@ -212,52 +220,6 @@ nav {
       font-size: 0.8rem; }
       nav a.button:hover {
         color: white; }
-
-.anythingSlider {
-  height: 30rem!important; }
-  .anythingSlider #slider {
-    display: block;
-    width: 100%;
-    height: 100%; }
-    .anythingSlider #slider li {
-      display: block;
-      width: 100%;
-      height: 100%;
-      float: left; }
-      .anythingSlider #slider li h2 {
-        font-size: 3rem; }
-      .anythingSlider #slider li p {
-        font-size: 1.5rem; }
-        .anythingSlider #slider li p .button {
-          color: #333333;
-          background: rgba(255, 255, 255, 0.6); }
-          .anythingSlider #slider li p .button:hover {
-            background: rgba(255, 255, 255, 0.8); }
-          .anythingSlider #slider li p .button:active {
-            background: white; }
-  .anythingSlider .arrow {
-    position: absolute;
-    margin-top: -1.5rem;
-    top: 50%;
-    cursor: pointer; }
-    .anythingSlider .arrow a {
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      font-family: "helvetica neue", verdana, arial, sans-serif;
-      border: 0.2rem solid white;
-      display: block;
-      text-decoration: none;
-      font-size: 1rem;
-      line-height: 1rem;
-      opacity: 0.4;
-      padding: 1rem;
-      width: 3.4rem; }
-      .anythingSlider .arrow a:hover {
-        opacity: 1; }
-    .anythingSlider .arrow.back {
-      left: 2rem; }
-    .anythingSlider .arrow.forward {
-      right: 2rem; }
 
 section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -335,6 +297,54 @@ footer {
   footer h4 {
     padding: 0; }
 
+/* Slider */
+.anythingSlider {
+  height: 30rem!important; }
+  .anythingSlider #slider {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .anythingSlider #slider li {
+      display: block;
+      width: 100%;
+      height: 100%;
+      float: left; }
+      .anythingSlider #slider li h2 {
+        font-size: 3rem; }
+      .anythingSlider #slider li p {
+        font-size: 1.5rem; }
+        .anythingSlider #slider li p .button {
+          color: #333333;
+          background: rgba(255, 255, 255, 0.6); }
+          .anythingSlider #slider li p .button:hover {
+            background: rgba(255, 255, 255, 0.8); }
+          .anythingSlider #slider li p .button:active {
+            background: white; }
+  .anythingSlider .arrow {
+    position: absolute;
+    margin-top: -1.5rem;
+    top: 50%;
+    cursor: pointer; }
+    .anythingSlider .arrow a {
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      font-family: "helvetica neue", verdana, arial, sans-serif;
+      border: 0.2rem solid white;
+      display: block;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1rem;
+      opacity: 0.4;
+      padding: 1rem;
+      width: 3.4rem; }
+      .anythingSlider .arrow a:hover {
+        opacity: 1; }
+    .anythingSlider .arrow.back {
+      left: 2rem; }
+    .anythingSlider .arrow.forward {
+      right: 2rem; }
+
+/* Grid */
 .block {
   -webkit-border-radius: 0.2rem;
   border-radius: 0.2rem;

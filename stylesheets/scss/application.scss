@@ -1,13 +1,21 @@
+/* Stylesheets */
+
 @import 'reset';
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+
+/* Variables */
 
 $lightgrey: darken(white, 20%);
 $medgrey: darken(white, 40%);
 $darkgrey: darken(white, 80%);
 $orange: #F15C37;
 
+/* Fonts */
+
 @include font-face(ProximaNova, '../fonts/proximanova-thin', light);
+
+/* Global */
 
 * {
   @include box-sizing(border-box);
@@ -24,11 +32,15 @@ $orange: #F15C37;
   color: $orange;
 }
 
+/* Basics */
+
 body {
   color: white;
   font-weight: normal;
   font-family: ProximaNova, "helvetica neue", helvetica, arial, sans-serif;
 }
+
+/* Typography */
 
 h1, h2, h3, h4, h5 {
   display: inline-block;
@@ -81,6 +93,8 @@ strong {
   font-weight: bold;
 }
 
+/* Links */
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -88,10 +102,6 @@ a {
   &:hover {
     text-decoration: none;
   }
-}
-
-.wrap {
-  @include outer-container;
 }
 
 .button {
@@ -123,6 +133,12 @@ a {
       background: darken($orange, 6%);
     }
   }
+}
+
+/* Layout */
+
+.wrap {
+  @include outer-container;
 }
 
 .right {
@@ -187,75 +203,6 @@ nav {
   }
 }
 
-.anythingSlider {
-  height: 30rem!important;
-
-  #slider {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    li {
-      display: block;
-      width: 100%;
-      height: 100%;
-      float: left;
-
-      h2 {
-        font-size: 3rem;
-      }
-
-      p {
-        font-size: 1.5rem;
-
-        .button {
-          color: $darkgrey;
-          background: rgba(white, 0.6rem);
-
-          &:hover {
-            background: rgba(white, 0.8rem);
-          }
-
-          &:active {
-            background: rgba(white, 1rem);
-          }
-        }
-      }
-    }
-  }
-
-  .arrow {
-    position: absolute;
-    margin-top: -1.5rem;
-    top: 50%;
-    cursor: pointer;
-
-    a {
-      @include border-radius(50%);
-      font-family: "helvetica neue", verdana, arial, sans-serif;
-      border: 0.2rem solid white;
-      display: block;
-      text-decoration: none;
-      font-size: 1rem;
-      line-height: 1rem;
-      opacity: 0.4;
-      padding: 1rem;
-      width: 3.4rem;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    &.back {
-      left: 2rem;
-    }
-
-    &.forward {
-      right: 2rem;
-    }
-  }
-}
 
 section {
   border-bottom: 1px solid rgba(white, 0.2);
@@ -356,6 +303,80 @@ footer {
     padding: 0;
   }
 }
+
+/* Slider */
+
+.anythingSlider {
+  height: 30rem!important;
+
+  #slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    li {
+      display: block;
+      width: 100%;
+      height: 100%;
+      float: left;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+
+        .button {
+          color: $darkgrey;
+          background: rgba(white, 0.6rem);
+
+          &:hover {
+            background: rgba(white, 0.8rem);
+          }
+
+          &:active {
+            background: rgba(white, 1rem);
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    margin-top: -1.5rem;
+    top: 50%;
+    cursor: pointer;
+
+    a {
+      @include border-radius(50%);
+      font-family: "helvetica neue", verdana, arial, sans-serif;
+      border: 0.2rem solid white;
+      display: block;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1rem;
+      opacity: 0.4;
+      padding: 1rem;
+      width: 3.4rem;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.back {
+      left: 2rem;
+    }
+
+    &.forward {
+      right: 2rem;
+    }
+  }
+}
+
+/* Grid */
 
 .block {
   @include border-radius(0.2rem);
