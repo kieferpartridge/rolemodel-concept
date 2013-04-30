@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
   font-weight: normal;
@@ -79,13 +80,73 @@ h4 {
 }
 
 p {
+  clear: both;
   font-size: 1rem;
   line-height: 2rem;
   padding: 0 0 2rem 0;
+
+  &.large {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    padding: 0 0 3rem 0;
+  }
 }
 
 strong {
   font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* Misc */
+
+.circle {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 30px;
+  font-size: 2rem;
+  background: $medgrey;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.green {
+    background: $green;
+  }
+
+  &.center {
+    position: absolute;
+    left: 50%;
+    margin: -10px 0 0 -25px;
+  }
+}
+
+h1, h2, h3, h4, p {
+
+  .circle {
+    margin: 0 1rem;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 
 /* Links */
@@ -261,6 +322,10 @@ a {
         }
       }
     }
+
+    *:last-child {
+      padding-bottom: 0
+    }
   }
 
   .sidebar {
@@ -293,6 +358,54 @@ a {
     word-wrap: break-word;
     color: $green;
     z-index: 1
+  }
+
+  .article {
+
+    p {
+      clear: none;
+    }
+  }
+
+  .tour {
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background: $lightgrey;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+    }
+
+    .circle {
+
+      &.center {
+        width: 100px;
+        height: 100px;
+        border: 25px solid white;
+        z-index: 2;
+        margin: -35px 0 0 -50px;
+      }
+    }
+
+    p {
+      background: white;
+      z-index: 1
+    }
+
+    & > p {
+      padding-top: 25px;
+    }
+
+    .row {
+
+      & +   .row {
+        padding-top: 25px;
+      }
+    }
   }
 }
 
@@ -339,66 +452,82 @@ a {
   }
 }
 
-/* Columns */
+/* Grid */
 
-.col-one {
-  @include span-columns(1);
-}
+.row {
+  @include outer-container;
 
-.col-two {
-  @include span-columns(2);
-}
+  [class*="col-"] {
 
-.col-three {
-  @include span-columns(3);
-}
+    p {
 
-.col-four {
-  @include span-columns(4);
-}
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
 
-.col-five {
-  @include span-columns(5);
-}
+  /* Columns */
 
-.col-six {
-  @include span-columns(6);
-}
+  .col-one {
+    @include span-columns(1);
+  }
 
-.col-seven {
-  @include span-columns(7);
-}
+  .col-two {
+    @include span-columns(2);
+  }
 
-.col-eight {
-  @include span-columns(8);
-}
+  .col-three {
+    @include span-columns(3);
+  }
 
-.col-nine {
-  @include span-columns(9);
-}
+  .col-four {
+    @include span-columns(4);
+  }
 
-/* Offsets */
+  .col-five {
+    @include span-columns(5);
+  }
 
-.offset-one {
-  @include shift(1);
-}
+  .col-six {
+    @include span-columns(6);
+  }
 
-.offset-two {
-  @include shift(2);
-}
+  .col-seven {
+    @include span-columns(7);
+  }
 
-.offset-three {
-  @include shift(3);
-}
+  .col-eight {
+    @include span-columns(8);
+  }
 
-.offset-four {
-  @include shift(4);
-}
+  .col-nine {
+    @include span-columns(9);
+  }
 
-.offset-five {
-  @include shift(5);
-}
+  /* Offsets */
 
-.offset-six {
-  @include shift(6);
+  .offset-one {
+    @include shift(1);
+  }
+
+  .offset-two {
+    @include shift(2);
+  }
+
+  .offset-three {
+    @include shift(3);
+  }
+
+  .offset-four {
+    @include shift(4);
+  }
+
+  .offset-five {
+    @include shift(5);
+  }
+
+  .offset-six {
+    @include shift(6);
+  }
 }
