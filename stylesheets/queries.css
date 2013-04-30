@@ -1,0 +1,73 @@
+/*
+Syntax error: Undefined mixin 'span-columns'.
+        on line 37 of stylesheets/scss/queries.scss, in `span-columns'
+        from line 37 of stylesheets/scss/queries.scss
+
+32:   }
+33: 
+34:   /* Columns */
+35: 
+36:   .col-one {
+37:     @include span-columns(16);
+38:   }
+39: 
+40:   .col-two {
+41:     @include span-columns(6);
+42:   }
+
+Backtrace:
+stylesheets/scss/queries.scss:37:in `span-columns'
+stylesheets/scss/queries.scss:37
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:360:in `visit_media'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/tree/root_node.rb:20:in `render'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/engine.rb:315:in `_render'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/engine.rb:262:in `render'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/lib/sass/plugin/compiler.rb:299:in `block in watch'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+/Users/kieferpartridge/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.3/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'span-columns'.\A         on line 37 of stylesheets/scss/queries.scss, in `span-columns'\A         from line 37 of stylesheets/scss/queries.scss\A \A 32:   }\A 33: \A 34:   /* Columns */\A 35: \A 36:   .col-one {\A 37:     @include span-columns(16);\A 38:   }\A 39: \A 40:   .col-two {\A 41:     @include span-columns(6);\A 42:   }"; }

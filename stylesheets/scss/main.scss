@@ -1,0 +1,404 @@
+
+/* Variables */
+
+$lightgrey: darken(white, 20%);
+$medgrey: darken(white, 40%);
+$darkgrey: darken(white, 80%);
+$blue: #1F61A9;
+$green: #3EA56D;
+
+/* Global */
+
+* {
+  @include box-sizing(border-box);
+
+  position: relative;
+
+  transition: width 0.1s, height 0.1s, opacity, 0.1s, margin 0.1s, color 0.1s, background 0.1s;
+  -moz-transition: width 0.1s, height 0.1s, opacity, 0.1s, margin 0.1s, color 0.1s, background 0.1s;
+  -webkit-transition: width 0.1s, height 0.1s, opacity, 0.1s, margin 0.1s, color 0.1s, background 0.1s;
+  -o-transition: width 0.1s, height 0.1s, opacity, 0.1s, margin 0.1s, color 0.1s, background 0.1s;
+}
+
+/* Basics */
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  background: darken(white, 5%);
+  color: darken(white, 75%);
+  font-weight: 400;
+  font-family: "Open Sans", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5 {
+  display: inline-block;
+  font-weight: 300;
+  padding: 0 0 2rem 0;
+  width: 100%;
+  clear: both;
+  color: $blue;
+
+  small {
+    font-size: 1rem;
+    color: $blue;
+    font-weight: normal;
+    margin-left: 1rem;
+  }
+
+  .button {
+    margin-left: 1rem;
+  }
+
+  &:only-child {
+    padding: 0;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 0 0 2rem 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button {
+  @include border-radius(0.25rem);
+  background: $medgrey;
+  color: white;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1rem;
+
+  &:hover {
+    color: white;
+    background: darken($medgrey, 4%);
+  }
+
+  &:active {
+    color: white;
+    background: darken($medgrey, 6%);
+  }
+
+  &.green {
+    background: $green;
+
+    &:hover {
+      background: darken($green, 4%);
+    }
+
+    &:active {
+      background: darken($green, 6%);
+    }
+  }
+}
+
+/* Layout */
+
+.wrap {
+  @include outer-container;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 6rem 4rem 0 4rem;
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  display: block;
+  width: 100%;
+  height: 6rem;
+  line-height: 4rem;
+  padding: 1rem 4rem;
+  margin-top: -6rem;
+
+  a:not(.button) {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    margin-left: 3rem;
+    letter-spacing: 0.1rem;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.current {
+      color: $green;
+    }
+
+    &.logo {
+      margin: 0;
+      line-height: 4rem;
+
+      img {
+        margin: 1rem 0 0 0;
+        height: 2rem;
+      }
+    }
+  }
+
+  .button {
+    font-size: 0.8rem;
+    line-height: 2rem;
+    margin-left: 3rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.content {
+  @include border-radius(0.2rem 0.2rem 0 0);
+  @include box-shadow(0 0 5px $medgrey);
+  background: white;
+  width: 100%;
+  padding: 4rem;
+  margin-bottom: -0.2rem;
+
+  .header {
+    @include box-sizing(content-box);
+    margin: -4rem -4rem 4rem -4rem;
+    padding: 4rem;
+    border-bottom: 1px solid $lightgrey;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      opacity: 0.5;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $green!important;
+      }
+    }
+
+    h1 {
+      padding: 0 0 4rem 0;
+    }
+
+    .details {
+      width: 100%;
+      font-size: 0.75em;
+
+      span {
+        margin-right: 0.5rem;
+
+        &.categories {
+          margin: 0 0 0 0.5rem;
+
+          a {
+            @include border-radius(0.2rem);
+            margin: 0 0.5rem 0 0;
+            padding: 0.25rem 0.5rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            background: $lightgrey;
+
+            &:hover {
+              background: lighten($lightgrey, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    width: 14rem;
+    padding: 0 0 0 2rem;
+    margin: 0 0 2rem 2rem;
+    float: right;
+    border-left: 1px solid $blue;
+    font-size: 0.8rem;
+    z-index: 1;
+
+    a {
+      display: block;
+      width: 100%;
+      clear: both;
+      padding: 1rem 0;
+
+      &:last-of-type {
+        padding: 1rem 0 0 0;
+      }
+    }
+  }
+
+  blockquote {
+    font-size: 1.25rem;
+    padding: 2rem 2rem 2rem 0;
+    width: 50%;
+    float: left;
+    line-height: 2em;
+    word-wrap: break-word;
+    color: $green;
+    z-index: 1
+  }
+}
+
+/* Grid */
+
+.block {
+  @include border-radius(0.2rem);
+  background: rgba(white, 0.2);
+  border: 0.2rem solid white;
+  min-height: 20rem;
+
+  &.device {
+    padding-top: 1.6rem;
+    height: 29.8rem;
+    display: inline-block;
+    overflow: hidden;
+
+    &::before {
+      @include border-radius(1rem);
+      background: white;
+      content: "";
+      display: block;
+      width: 0.5rem;
+      height: 0.5rem;
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+
+    &::after {
+      background: white;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      position: absolute;
+      top: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      position: static;
+    }
+  }
+}
+
+/* Columns */
+
+.col-one {
+  @include span-columns(1);
+}
+
+.col-two {
+  @include span-columns(2);
+}
+
+.col-three {
+  @include span-columns(3);
+}
+
+.col-four {
+  @include span-columns(4);
+}
+
+.col-five {
+  @include span-columns(5);
+}
+
+.col-six {
+  @include span-columns(6);
+}
+
+.col-seven {
+  @include span-columns(7);
+}
+
+.col-eight {
+  @include span-columns(8);
+}
+
+.col-nine {
+  @include span-columns(9);
+}
+
+/* Offsets */
+
+.offset-one {
+  @include shift(1);
+}
+
+.offset-two {
+  @include shift(2);
+}
+
+.offset-three {
+  @include shift(3);
+}
+
+.offset-four {
+  @include shift(4);
+}
+
+.offset-five {
+  @include shift(5);
+}
+
+.offset-six {
+  @include shift(6);
+}

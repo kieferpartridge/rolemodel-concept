@@ -1,3 +1,3 @@
-# ChOP Landing Page
+# RoleModel concept
 
-Landing page for V2 of the Church Online Platform -- built on a Jekyll framework with SCSS.
+Jekyll + SCSS
