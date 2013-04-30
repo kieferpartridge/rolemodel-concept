@@ -353,10 +353,8 @@ a {
   .content .tour p {
     background: white;
     z-index: 1; }
-  .content .tour > p {
-    padding-top: 25px; }
-  .content .tour .row + .row {
-    padding-top: 25px; }
+    .content .tour p:first-child {
+      padding-top: 25px; }
 
 /* Grid */
 .block {

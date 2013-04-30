@@ -393,16 +393,9 @@ a {
 
     p {
       background: white;
-      z-index: 1
-    }
+      z-index: 1;
 
-    & > p {
-      padding-top: 25px;
-    }
-
-    .row {
-
-      & +   .row {
+      &:first-child {
         padding-top: 25px;
       }
     }
