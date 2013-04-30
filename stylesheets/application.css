@@ -127,6 +127,8 @@ p {
   font-size: 1rem;
   line-height: 2rem;
   padding: 0 0 2rem 0; }
+  p:last-child {
+    padding: 0; }
   p.large {
     font-size: 1.5rem;
     line-height: 3rem;
@@ -187,8 +189,10 @@ a {
   display: inline-block;
   padding: 0.25rem 1rem;
   text-decoration: none;
-  font-size: 1rem;
-  line-height: 1rem; }
+  font-size: 0.8rem;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 300; }
   .button:hover {
     color: white;
     background: #8f8f8f; }
@@ -251,10 +255,7 @@ a {
         margin: 1rem 0 0 0;
         height: 2rem; }
   .nav .button {
-    font-size: 0.8rem;
-    line-height: 2rem;
-    margin-left: 3rem;
-    letter-spacing: 0.1rem; }
+    margin-left: 3rem; }
 
 .content {
   -webkit-border-radius: 0.2rem 0.2rem 0 0;
@@ -335,6 +336,15 @@ a {
     z-index: 1; }
   .content .article p {
     clear: none; }
+  .content .section {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    clear: both;
+    border-top: 1px solid #cccccc;
+    margin: 4rem -4rem -4rem -4rem;
+    padding: 4rem;
+    width: 100%; }
   .content .tour::after {
     content: "";
     width: 1px;
@@ -354,7 +364,7 @@ a {
     background: white;
     z-index: 1; }
     .content .tour p:first-child {
-      padding-top: 25px; }
+      padding-top: 2rem; }
 
 /* Grid */
 .block {
@@ -404,8 +414,6 @@ a {
     display: table; }
   .row:after {
     clear: both; }
-  .row [class*="col-"] p:last-child {
-    padding-bottom: 0; }
   .row .col-one {
     display: block;
     float: left;
@@ -468,6 +476,13 @@ a {
     margin-right: 2.35765%;
     width: 74.41059%; }
     .row .col-nine:last-child {
+      margin-right: 0; }
+  .row .col-ten {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    .row .col-ten:last-child {
       margin-right: 0; }
   .row .offset-one {
     margin-left: 8.5298%; }

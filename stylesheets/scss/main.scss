@@ -85,6 +85,10 @@ p {
   line-height: 2rem;
   padding: 0 0 2rem 0;
 
+  &:last-child {
+    padding: 0;
+  }
+
   &.large {
     font-size: 1.5rem;
     line-height: 3rem;
@@ -167,8 +171,10 @@ a {
   display: inline-block;
   padding: 0.25rem 1rem;
   text-decoration: none;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  font-weight: 300;
 
   &:hover {
     color: white;
@@ -250,10 +256,7 @@ a {
   }
 
   .button {
-    font-size: 0.8rem;
-    line-height: 2rem;
     margin-left: 3rem;
-    letter-spacing: 0.1rem;
   }
 }
 
@@ -367,6 +370,15 @@ a {
     }
   }
 
+  .section {
+    @include box-sizing(content-box);
+    clear: both;
+    border-top: 1px solid $lightgrey;
+    margin: 4rem -4rem -4rem -4rem;
+    padding: 4rem;
+    width: 100%;
+  }
+
   .tour {
 
     &::after {
@@ -396,7 +408,7 @@ a {
       z-index: 1;
 
       &:first-child {
-        padding-top: 25px;
+        padding-top: 2rem;
       }
     }
   }
@@ -450,16 +462,6 @@ a {
 .row {
   @include outer-container;
 
-  [class*="col-"] {
-
-    p {
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-  }
-
   /* Columns */
 
   .col-one {
@@ -496,6 +498,10 @@ a {
 
   .col-nine {
     @include span-columns(9);
+  }
+
+  .col-ten {
+    @include span-columns(10);
   }
 
   /* Offsets */
