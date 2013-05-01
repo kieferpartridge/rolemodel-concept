@@ -99,6 +99,12 @@ p {
     line-height: 3rem;
     padding: 0 0 3rem 0;
   }
+
+  &.small {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    padding: 0;
+  }
 }
 
 strong {
@@ -413,6 +419,22 @@ a {
     margin: 4rem -4rem -4rem -4rem;
     padding: 4rem;
     width: 100%;
+
+    &.footer {
+      background: $medgrey;
+      border-top: 1px solid $darkgrey;
+
+      p {
+
+        &:first-of-type {
+          padding-top: 4rem;
+        }
+
+        .item {
+          margin: 0 0.5rem;
+        }
+      }
+    }
   }
 
   .tile {
