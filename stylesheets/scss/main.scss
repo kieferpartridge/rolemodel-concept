@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5 {
   &:only-child {
     padding: 0;
   }
+
+  &.green {
+    color: $green;
+  }
 }
 
 h1 {
@@ -455,13 +459,10 @@ a {
     p {
       background: white;
       z-index: 1;
-
-      &:first-child {
-        padding-top: 2rem;
-      }
     }
 
     & > p {
+      padding: 2rem 0;
 
       &:first-child {
         padding-top: 0;

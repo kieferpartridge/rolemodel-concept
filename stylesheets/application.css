@@ -108,6 +108,8 @@ h1, h2, h3, h4, h5 {
     margin-left: 1rem; }
   h1:only-child, h2:only-child, h3:only-child, h4:only-child, h5:only-child {
     padding: 0; }
+  h1.green, h2.green, h3.green, h4.green, h5.green {
+    color: #3ea56d; }
 
 h1 {
   font-size: 3rem; }
@@ -393,10 +395,10 @@ a {
   .content .tour p {
     background: white;
     z-index: 1; }
-    .content .tour p:first-child {
-      padding-top: 2rem; }
-  .content .tour > p:first-child {
-    padding-top: 0; }
+  .content .tour > p {
+    padding: 2rem 0; }
+    .content .tour > p:first-child {
+      padding-top: 0; }
 
 /* Grid */
 .block {
