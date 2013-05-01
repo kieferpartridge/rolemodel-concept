@@ -40,6 +40,7 @@ body {
 h1, h2, h3, h4, h5 {
   display: inline-block;
   font-weight: 300;
+  line-height: 1.5em;
   padding: 0 0 2rem 0;
   width: 100%;
   clear: both;
@@ -104,8 +105,28 @@ em {
   font-style: italic;
 }
 
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
+[class*="fontawesome-"] {
+
+  &:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+
+  &.large {
+    font-size: 3rem;
+    clear: both;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0 0 1rem 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
+
+  li {
+    padding: 1rem 0;
+  }
 }
 
 /* Misc */
@@ -116,10 +137,9 @@ em {
   height: 50px;
   width: 50px;
   line-height: 30px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: $medgrey;
   color: white;
-  font-weight: bold;
   padding: 10px;
   text-align: center;
 
@@ -129,6 +149,10 @@ em {
 
   &.green {
     background: $green;
+  }
+
+  &.white {
+    background: white;
   }
 
   &.center {
@@ -365,6 +389,14 @@ a {
 
   .article {
 
+    h2 {
+      padding: 2rem 0;
+
+      &:first-child {
+        padding: 0 0 2rem 0;
+      }
+    }
+
     p {
       clear: none;
     }
@@ -377,6 +409,23 @@ a {
     margin: 4rem -4rem -4rem -4rem;
     padding: 4rem;
     width: 100%;
+  }
+
+  .tile {
+    @include border-radius(0.2rem);
+    background: $lightgrey;
+    padding: 2rem 1rem;
+
+    .circle {
+      display: block;
+      margin: 0 auto 1rem auto;
+      color: $darkgrey;
+    }
+
+    h3 {
+      color: $darkgrey;
+      padding: 0;
+    }
   }
 
   .tour {
@@ -409,6 +458,13 @@ a {
 
       &:first-child {
         padding-top: 2rem;
+      }
+    }
+
+    & > p {
+
+      &:first-child {
+        padding-top: 0;
       }
     }
   }
@@ -461,6 +517,10 @@ a {
 
 .row {
   @include outer-container;
+
+  & + .row {
+    padding-top: 2rem;
+  }
 
   /* Columns */
 
