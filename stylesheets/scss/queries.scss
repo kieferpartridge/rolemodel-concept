@@ -24,6 +24,7 @@
     .header {
       margin: -1rem -1rem 2rem -1rem;
       padding: 1rem 1rem 2rem 1rem;
+      text-align: left;
 
       h1 {
         padding: 0 0 2rem 0;
@@ -33,43 +34,58 @@
 
   /* Columns */
 
-  .col-one {
-    @include span-columns(16);
-  }
+  .row {
 
-  .col-two {
-    @include span-columns(6);
-  }
+    [class*="col-"] {
+      margin-bottom: 2rem;
 
-  .col-three {
-    @include span-columns(4);
-  }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
 
-  .col-four {
-    @include span-columns(6);
-  }
+    .col-one {
+      @include span-columns(12);
+    }
 
-  .col-five {
-    @include span-columns(6);
-  }
+    .col-two {
+      @include span-columns(6);
 
-  .col-six {
-    @include span-columns(4);
-  }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
 
-  .col-seven {
-    @include span-columns(4);
-  }
+    .col-three {
+      @include span-columns(4);
+    }
 
-  .col-eight {
-    @include span-columns(4);
-  }
+    .col-four {
+      @include span-columns(6);
+    }
 
-  .col-nine {
-    @include span-columns(4);
-  }
+    .col-five {
+      @include span-columns(6);
+    }
 
-  .col-ten {
-    @include span-columns(4);
+    .col-six {
+      @include span-columns(12);
+    }
+
+    .col-seven {
+      @include span-columns(4);
+    }
+
+    .col-eight {
+      @include span-columns(4);
+    }
+
+    .col-nine {
+      @include span-columns(4);
+    }
+
+    .col-ten {
+      @include span-columns(4);
+    }
   }
 }
