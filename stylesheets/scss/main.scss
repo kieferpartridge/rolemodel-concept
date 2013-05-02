@@ -299,13 +299,13 @@ a {
   @include box-shadow(0 0 5px $medgrey);
   background: white;
   width: 100%;
-  padding: 4rem;
+  padding: 2rem;
   margin-bottom: -0.2rem;
 
   .header {
     @include box-sizing(content-box);
-    margin: -4rem -4rem 4rem -4rem;
-    padding: 4rem;
+    margin: -2rem -2rem 2rem -2rem;
+    padding: 2rem;
     border-bottom: 1px solid $lightgrey;
 
     .image {
@@ -416,8 +416,8 @@ a {
     @include box-sizing(content-box);
     clear: both;
     border-top: 1px solid $lightgrey;
-    margin: 4rem -4rem -4rem -4rem;
-    padding: 4rem;
+    margin: 2rem -2rem -2rem -2rem;
+    padding: 2rem;
     width: 100%;
 
     &.footer {
