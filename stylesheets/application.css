@@ -370,10 +370,10 @@ a {
     padding: 2rem;
     width: 100%; }
     .content .section.footer {
-      background: #999999;
-      border-top: 1px solid #333333; }
+      background: #cccccc;
+      border-top: 1px solid #999999; }
       .content .section.footer p:first-of-type {
-        padding-top: 4rem; }
+        padding-top: 2rem; }
       .content .section.footer p .item {
         margin: 0 0.5rem; }
   .content .tile {
