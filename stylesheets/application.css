@@ -284,14 +284,14 @@ a {
   box-shadow: 0 0 5px #999999;
   background: white;
   width: 100%;
-  padding: 2rem;
+  padding: 4rem;
   margin-bottom: -0.2rem; }
   .content .header {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    margin: -2rem -2rem 2rem -2rem;
-    padding: 2rem;
+    margin: -4em -4em 4em -4em;
+    padding: 4em;
     border-bottom: 1px solid #cccccc; }
     .content .header .image {
       width: 100%;
@@ -366,8 +366,8 @@ a {
     box-sizing: content-box;
     clear: both;
     border-top: 1px solid #cccccc;
-    margin: 2rem -2rem -2rem -2rem;
-    padding: 2rem;
+    margin: 4rem -4rem -4rem -4rem;
+    padding: 4rem;
     width: 100%; }
     .content .section.footer {
       background: #cccccc;
